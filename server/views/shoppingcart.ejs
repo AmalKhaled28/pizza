@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>shoping Cart</title>
+    <link rel="icon" href="/public/media/istockphoto-843213562-612x612.png" type="image/icon type">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='/public/css/shoppingcart.css'>
+</head>
+<body style="background-color: rgb(154, 173, 173);">
+    
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <img src="/public/media/istockphoto-843213562-612x612.png" style="height: 70px; width: 70px; margin-right: -40px; margin-top: -5px;    margin-bottom: -6px;">
+                <a href="/api/pizza/home">pizza</a>
+              </div>
+          <ul>
+            <li><a href="/api/pizza/home">Home</a></li>
+            <li><a href="/api/pizza/about">About</a></li>
+            <li><a href="/api/pizza/menu">Menu</a></li>
+            <li><a href="/api/pizza/contact">Contact</a></li>
+            <li><a href="/api/pizza/profile">Profile</a></li>
+            <li><a href="/api/pizza/shoppingcart"> <div id="cart-btn" class="fas fa-shopping-cart"></div></a> </li>
+            <li><a href="/api/pizza/logout"> <div class="fa fa-sign-out"></div></a> </li>
+           </ul>
+        </div>
+      </nav>
+      <div class="food-menu-container ">
+      <!-- if cart > 0 , there is a pizza in cart 
+    we will calculate the total price -->
+        <%
+        if(cart.length > 0)
+        {
+            var total =0;
+            cart.forEach(pizza => {
+        %>
+        
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="<%= pizza.img_path %>" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile"> <%= pizza.pizzaName %> </h2>
+                <p class="food-price">Price: &#8377;  <%= pizza.pizzaPrice %></p>
+                <h4>* <%= pizza.qty %> </h4>
+                <form action="/api/pizza/deleteItemInCart" method="post">
+                    <input type="hidden" name="pizza_id" value="<%= pizza.pizzaId %>">
+                    <input type="submit" value="delete" class="btn">
+                 </form>
+            </div>
+        </div>
+    <!-- we take price for pizza and price to calculate the total price  -->
+        <%
+           total += parseFloat(pizza.qty) * parseFloat(pizza.pizzaPrice);
+          })
+        %>
+        <div style="place-self: self-end;">
+            <h3>Total : <%= total %> </h3>
+        </div>
+        <%
+        }
+        else{
+        %>
+        <h3> No item found in cart </h3>
+        <%
+        }
+        %>
+        <div>
+            <%
+            if(cart.length > 0)
+            {
+            %>
+            <!--button appears when there is pizza in cart -->
+            <form action="/api/pizza/checkout" method="post">
+                <input type="hidden" name="total_price" value="<%= total %>">
+                <input type="submit" class="MenuButton btn" value="CHECK OUT">
+            </form>
+            <%
+            }
+            %>
+        </div>
+    </div>
+</body>
+<footer>@Copyright Amal2023</footer>
+</html>
+
+

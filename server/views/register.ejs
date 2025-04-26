@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Register</title>
+    <link rel="icon" href="/public/media/istockphoto-843213562-612x612.png" type="image/icon type">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/public/css/register.css'>
+</head>
+<body >
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <img src="/public/media/istockphoto-843213562-612x612.png" style="height: 70px; width: 70px; margin-right: -40px; margin-top: -5px;    margin-bottom: -6px;">
+                <a href="/api/pizza/home">pizza</a>
+              </div>
+        
+        </div>
+      </nav>
+      container
+    
+      <div class="wrapper">
+        <div class="header">
+            <h2>Registration Form</h2>
+        </div>
+        <form id="form" class="form" action="/api/pizza/post-register" method="post">
+            <div class="form-control">
+                <input type="text" placeholder="Enter name" id="name" name="name" />
+                <small></small>
+            </div>
+            <div class="form-control">
+                <input type="email" placeholder="Enter email" id="email" name="email"/>
+                <small></small>
+            </div>
+            <div class="form-control" style="margin-bottom: 5px;">
+                <input type="password" placeholder="Password" id="password" name="password" >
+                <small></small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script src='/public/js/validation.js'></script>
+    
+</body>
+</html>

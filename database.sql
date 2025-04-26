@@ -1,0 +1,1 @@
+SELECT * FROM pizza.customer_order;

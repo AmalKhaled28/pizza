@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Profile</title>
+    <link rel="icon" href="/public/media/istockphoto-843213562-612x612.png" type="image/icon type">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='/public/css/profile.css'>
+</head>
+<body style="background-color: antiquewhite;">
+<div >
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <img src="/public/media/istockphoto-843213562-612x612.png" style="height: 70px; width: 70px; margin-right: -40px; margin-top: -5px;    margin-bottom: -6px;">
+                <a href="/api/pizza/home">pizza</a>
+              </div>
+              <ul>
+                <li><a href="/api/pizza/home">Home</a></li>
+                <li><a href="/api/pizza/about">About</a></li>
+                <li><a href="/api/pizza/menu">Menu</a></li>
+                <li><a href="/api/pizza/contact">Contact</a></li>
+                <li><a href="/api/pizza/profile">Profile</a></li>
+                <li><a href="/api/pizza/shoppingcart"> <div id="cart-btn" class="fas fa-shopping-cart"></div></a> </li>
+                <li><a href="/api/pizza/logout"> <div class="fa fa-sign-out"></div></a> </li>
+               </ul>
+        </div>
+      </nav>
+      <div style="background-color: antiquewhite; margin-top: 70px;" > 
+<section class="order" id="order">
+
+    <h1 class="heading" style="margin-top: 120px; text-align: center; font-size: 35px;">PROFILE</h1>
+ 
+    <form action="/api/pizza/updateProfile" method="post">
+ 
+        <input type="hidden" name="id" value="<%= user.id %>">
+        <div class="flex">
+            <div class="inputBox">
+                <span>your name :</span>
+                <input type="text" name="name" class="box" required placeholder="enter your name" maxlength="20" value="<%= user.name %>">
+            </div>
+            <div class="inputBox">
+                <span>your phone :</span>
+                <input type="number" name="phone" class="box"  placeholder="enter your number" min="0" value="<%= user.phone %>">
+            </div>
+            <div class="inputBox">
+                <span>zip code :</span>
+                <input type="number" name="zip_code" class="box"  placeholder="e.g. 123456" min="0" value="<%= user.zipcode %>">
+            </div>
+            <div class="inputBox">
+                <span>address :</span>
+                <input type="text" name="address" class="box"  placeholder="e.g. flat no." maxlength="50" value="<%= user.address %>">
+        </div> 
+       </div>
+ 
+       <input type="submit" value="Save" class="MenuButton" name="order" >
+ 
+    </form>
+ 
+ </section>
+      </div>
+      <footer style="text-align: center; color: white; background-color: #1b1b1b;">
+         @Copyright Amal2023
+        </footer>
+</body>
+</html>

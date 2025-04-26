@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+
+
+    * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+         padding-bottom: 20px;
+         font-family: 'Nunito', sans-serif;
+         color: white;
+          background-image: url(../media/pizza-wallpaper22.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+              background-size: cover;
+          
+        }
+      
+      .wrapper{
+        background-color: #464953d3;
+        position: relative;
+        width:30%;
+        margin: 150px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: -3px -3px 9px#aaa9a9a2,3px 3px 7px rgba(147,149,151,0.671);
+
+      }
+      
+      .header {
+        position: relative;
+        text-align: center;
+      }
+      
+        .header h2 {
+           color: #fff;
+        }
+      
+      .form {
+        margin: 0 auto;
+        max-width: 16rem;
+        overflow: auto;
+      }
+      
+      .form-control {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+      }
+        .form-control input {
+            border: 1px solid transparent;
+            border-bottom-color: white;
+            background-color: transparent;
+            color: white;
+            border-radius: 0;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            width: 100%;
+        }
+      
+            .form-control input:focus {
+                outline: 0;
+                border-bottom-color: #777;
+            }
+      
+        .form-control.success input {
+            border-bottom-color: #2ecc71;
+        }
+      
+        .form-control.error input {
+            border-bottom-color: #e74c3c;
+        }
+        
+        .form-control small {
+            color: #e74c3c;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+            font-size: 9px;
+            margin-bottom: -16px;
+        }
+      
+        .form-control.error small {
+            visibility: visible;
+        }
+      
+      .form button {
+        background-color: #adb3dd;
+        border-radius: 15px;
+        color: #000;
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 20px;
+        width: 100%;
+      }
+      .form-control button:focus {
+                outline: 0;
+                border-bottom-color: #777;
+            }
+      
+    

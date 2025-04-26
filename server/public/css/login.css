@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+  margin-top: -180px;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+
+body {
+    margin: 0;
+     padding-bottom: 20px;
+     font-family: 'Nunito', sans-serif;
+     color: white;
+      background-image: url(../media/pizza-wallpaper22.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+          background-size: cover;
+      
+    }
+  
+
+.wrapper{
+  width: 380px;
+  padding: 40px 30px 50px 30px;
+  background-color: #464953d3;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: -3px -3px 9px#aaa9a9a2,3px 3px 7px rgba(147,149,151,0.671);
+  margin-left: 40%;
+  margin-top: 180px;
+}
+.wrapper header{
+  font-size: 35px;
+  font-weight: 600;
+}
+.wrapper form{
+  margin: 40px 0;
+}
+
+form input{
+ 
+  outline: none;
+  padding: 10px 45px;
+  font-size: 18px;
+  background: none;
+  caret-color: #5372F0;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+}
+
+
+
+.wrapper a{
+  color: #5372F0;
+  text-decoration: none;
+}
+.wrapper a:hover{
+  text-decoration: underline;
+}
+
+
+button
+{background-color: #adb3dd;
+    border-radius: 15px;
+    color: #000;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
